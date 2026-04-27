@@ -3,208 +3,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Srinadh K | Senior Java Full Stack Engineer</title>
+    <title>Srinadh K | Senior Java Full Stack Architect</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #0f172a;
-            --secondary: #1e293b;
+            --dark: #020617;
+            --slate: #0f172a;
             --accent: #3b82f6;
-            --text-main: #f8fafc;
-            --text-dim: #94a3b8;
+            --text-main: #334155;
+            --text-dim: #64748b;
             --white: #ffffff;
-            --bg: #f1f5f9;
+            --bg: #f8fafc;
         }
 
+        * { box-sizing: border-box; }
         body {
-            font-family: 'Inter', -apple-system, sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
             margin: 0;
             background: var(--bg);
-            color: var(--primary);
+            color: var(--text-main);
             line-height: 1.6;
         }
 
         header {
-            background: var(--primary);
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            background: var(--dark);
             color: var(--white);
-            padding: 80px 20px;
-            text-align: center;
-            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+            padding: 60px 20px;
+            border-bottom: 4px solid var(--accent);
         }
 
-        .header-content { max-width: 900px; margin: 0 auto; }
+        .header-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .header-text h1 { font-size: 2.8rem; margin: 0; letter-spacing: -1px; }
+        .header-text p { color: var(--accent); font-weight: 700; margin: 5px 0; font-size: 1.1rem; text-transform: uppercase; }
+
+        .contact-info { text-align: right; font-size: 0.9rem; }
+        .contact-info div { margin-bottom: 5px; display: flex; align-items: center; justify-content: flex-end; gap: 10px; }
+        .contact-info a { color: white; text-decoration: none; transition: 0.3s; }
+        .contact-info a:hover { color: var(--accent); }
+
+        .main-layout {
+            max-width: 1300px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: 380px 1fr;
+            gap: 40px;
+            padding: 0 20px;
+        }
+
+        /* LEFT SIDE: SUMMARY & SKILLS */
+        .side-bar { position: sticky; top: 20px; align-self: start; }
         
-        header h1 { font-size: 3rem; margin: 0; letter-spacing: -1px; }
-        header p { font-size: 1.2rem; color: var(--text-dim); margin: 10px 0 25px; }
+        .card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-bottom: 25px; border-top: 4px solid var(--accent); }
+        .card h2 { font-size: 1.3rem; margin-top: 0; color: var(--dark); border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 20px; }
+        
+        .summary-content p { font-size: 0.95rem; margin-bottom: 15px; color: #475569; text-align: justify; }
+        
+        .skill-list { display: flex; flex-wrap: wrap; gap: 8px; }
+        .skill-tag { background: #eff6ff; color: var(--accent); padding: 5px 12px; border-radius: 4px; font-weight: 700; font-size: 0.75rem; border: 1px solid #dbeafe; }
 
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            font-size: 1.1rem;
-        }
+        /* RIGHT SIDE: FULL RESUME EXPERIENCE */
+        .content-area { background: white; padding: 50px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .content-area h2 { font-size: 1.8rem; margin-top: 0; margin-bottom: 40px; color: var(--dark); display: flex; align-items: center; gap: 15px; }
+        .content-area h2::after { content: ""; flex: 1; height: 1px; background: #eee; }
 
-        .social-links a {
-            color: var(--white);
-            text-decoration: none;
-            transition: color 0.3s;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
+        .job-block { margin-bottom: 50px; }
+        .job-header { display: flex; justify-content: space-between; margin-bottom: 15px; border-bottom: 1px solid #f1f5f9; padding-bottom: 10px; }
+        .job-title h3 { margin: 0; font-size: 1.4rem; color: var(--dark); }
+        .job-title b { color: var(--accent); font-size: 1rem; }
+        .job-meta { text-align: right; }
+        .job-date { font-weight: 800; color: var(--dark); display: block; }
+        .job-loc { font-size: 0.85rem; color: var(--text-dim); }
 
-        .social-links a:hover { color: var(--accent); }
+        .bullet-list { padding-left: 20px; list-style-type: none; }
+        .bullet-list li { margin-bottom: 12px; position: relative; font-size: 0.95rem; color: #334155; line-height: 1.7; }
+        .bullet-list li::before { content: "▹"; position: absolute; left: -20px; color: var(--accent); font-weight: bold; }
+        .bullet-list li b { color: var(--dark); }
 
-        section {
-            max-width: 1000px;
-            margin: -40px auto 40px;
-            background: var(--white);
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-        }
+        footer { background: var(--dark); color: #94a3b8; text-align: center; padding: 40px; margin-top: 60px; }
 
-        h2 {
-            font-size: 1.5rem;
-            color: var(--primary);
-            border-bottom: 2px solid var(--accent);
-            display: inline-block;
-            margin-bottom: 25px;
-        }
-
-        /* Skills Grid */
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-            gap: 15px;
-        }
-
-        .skill-card {
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            padding: 10px;
-            border-radius: 8px;
-            text-align: center;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: all 0.3s;
-        }
-
-        .skill-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-3px);
-            color: var(--accent);
-        }
-
-        /* Experience and Projects */
-        .item { margin-bottom: 40px; }
-        .item-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 10px;
-        }
-
-        .item-header h3 { margin: 0; color: var(--accent); font-size: 1.3rem; }
-        .date { font-weight: bold; color: var(--text-dim); font-size: 0.9rem; }
-
-        .project-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        .project-card {
-            background: #f8fafc;
-            padding: 25px;
-            border-radius: 10px;
-            border-left: 4px solid var(--accent);
-        }
-
-        .project-card h4 { margin-top: 0; color: var(--primary); }
-
-        footer {
-            text-align: center;
-            padding: 40px;
-            color: var(--text-dim);
-            background: var(--primary);
-        }
-
-        @media (max-width: 768px) {
-            .project-grid { grid-template-columns: 1fr; }
-            .item-header { flex-direction: column; }
+        @media (max-width: 900px) {
+            .main-layout { grid-template-columns: 1fr; }
+            .header-container { flex-direction: column; text-align: center; gap: 20px; }
+            .contact-info { text-align: center; }
+            .contact-info div { justify-content: center; }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="header-content">
-        <h1>Srinadh K</h1>
-        <p>Senior Java Full Stack Engineer | Cloud Architect | Microservices Specialist</p>
-        <div class="social-links">
-            <a href="https://github.com/kocherlasrinadh2-crypto"><i class="fab fa-github"></i> View Profile</a>
-            <a href="https://www.linkedin.com"><i class="fab fa-linkedin"></i> View Profile</a>
-            <a href="mailto:kocherlasrinadh2@gmail.com"><i class="fas fa-envelope"></i> Contact Me</a>
+    <div class="header-container">
+        <div class="header-text">
+            <h1>Srinadh K</h1>
+            <p>Senior Java Full Stack Engineer & Cloud Architect</p>
+        </div>
+        <div class="contact-info">
+            <div><i class="fas fa-envelope"></i> <a href="mailto:kocherlasrinadh2@gmail.com">kocherlasrinadh2@gmail.com</a></div>
+            <div><i class="fas fa-phone"></i> <a href="tel:+19312979014">+1 (931) 297-9014</a></div>
+            <div><i class="fas fa-map-marker-alt"></i> Dallas-Fort Worth, TX (Open to Relocation)</div>
+            <div><i class="fab fa-github"></i> <a href="https://github.com/kocherlasrinadh2-crypto">github.com/kocherlasrinadh2-crypto</a></div>
         </div>
     </div>
 </header>
 
-<section>
-    <h2>Executive Summary</h2>
-    <p>
-        Strategic and performance-driven <b>Senior Full Stack Developer</b> with over 9 years of expertise in architecting 
-        distributed systems. I specialize in building high-concurrency, low-latency applications utilizing 
-        <b>Java 21, Kotlin, and Spring WebFlux</b>. My core focus is on transforming complex business requirements 
-        into scalable cloud-native solutions across the Telecom, Fintech, and Aerospace sectors. Proven track record 
-        in leading large-scale data migrations and implementing event-driven architectures with <b>Apache Kafka</b> 
-        within AWS and GCP ecosystems.
-    </p>
-</section>
+<div class="main-layout">
+    <div class="side-bar">
+        <div class="card">
+            <h2>Professional Summary</h2>
+            <div class="summary-content">
+                <p><b>Executive Profile:</b> Senior Java Full Stack Developer with <b>9+ years</b> of career progression specializing in high-concurrency distributed systems, cloud-native architecture, and full-lifecycle software delivery.</p>
+                <p><b>Technical Leadership:</b> Proven track record in leading digital transformation initiatives, migrating monolithic legacy systems into <b>Microservices</b>, and implementing event-driven designs using <b>Apache Kafka</b> and Spring WebFlux.</p>
+                <p><b>Domain Expertise:</b> Deep experience across <b>Fintech, Telecom, Aviation, and Government</b> sectors, ensuring all deliverables meet OWASP security standards and high-availability requirements (99.99% uptime).</p>
+                <p><b>Innovation:</b> Expert in <b>Java 21</b> and Kotlin, utilizing Virtual Threads, Reactive Streams, and modern DevOps practices (Docker/K8s/CI/CD) to reduce infrastructure costs and latency.</p>
+            </div>
+        </div>
 
-<section>
-    <h2>Impactful Projects</h2>
-    <div class="project-grid">
-        <div class="project-card">
-            <h4><i class="fas fa-project-diagram"></i> Kafka Order Ecosystem</h4>
-            <p>Engineered a real-time event-driven processing engine handling over 100k transactions per hour. Utilized Spring Boot and Kafka with Schema Registry to ensure data integrity and asynchronous fault tolerance.</p>
-        </div>
-        <div class="project-card">
-            <h4><i class="fas fa-shield-alt"></i> Enterprise Auth Service</h4>
-            <p>Designed a centralized JWT-based Identity Provider using Spring Security and OAuth2. Implemented Role-Based Access Control (RBAC) to secure 50+ microservices for a major telecom client.</p>
-        </div>
-        <div class="project-card">
-            <h4><i class="fas fa-cloud-upload-alt"></i> Cloud-Native API Gateway</h4>
-            <p>Architected a high-throughput API Gateway using Spring Cloud Gateway and WebFlux. Integrated Redis for rate-limiting and circuit breakers (Resilience4j) to maintain 99.99% system uptime.</p>
-        </div>
-        <div class="project-card">
-            <h4><i class="fas fa-database"></i> Real-time Analytics Dashboard</h4>
-            <p>Built a responsive full-stack platform using React and GraphQL. Integrated real-time data streaming from PostgreSQL to provide executives with live operational KPIs.</p>
+        <div class="card">
+            <h2>Technical Arsenal</h2>
+            <div class="skill-list">
+                <span class="skill-tag">Java 21</span><span class="skill-tag">Kotlin</span><span class="skill-tag">Spring Boot 3</span>
+                <span class="skill-tag">Microservices</span><span class="skill-tag">Apache Kafka</span><span class="skill-tag">WebFlux</span>
+                <span class="skill-tag">AWS (EKS/S3/RDS)</span><span class="skill-tag">GCP (GKE)</span><span class="skill-tag">Kubernetes</span>
+                <span class="skill-tag">React.js</span><span class="skill-tag">Angular</span><span class="skill-tag">PostgreSQL</span>
+                <span class="skill-tag">MongoDB</span><span class="skill-tag">Docker</span><span class="skill-tag">Terraform</span>
+                <span class="skill-tag">CI/CD (Jenkins)</span><span class="skill-tag">OAuth2/JWT</span><span class="skill-tag">Hibernate</span>
+            </div>
         </div>
     </div>
-</section>
 
-<section>
-    <h2>Technical Arsenal</h2>
-    <div class="skills-container">
-        <div class="skill-card">Java 21 / Kotlin</div>
-        <div class="skill-card">Spring Boot 3.x</div>
-        <div class="skill-card">Spring WebFlux</div>
-        <div class="skill-card">Apache Kafka</div>
-        <div class="skill-card">AWS (EKS/RDS)</div>
-        <div class="skill-card">React / Redux</div>
-        <div class="skill-card">Kubernetes</div>
-        <div class="skill-card">PostgreSQL</div>
-        <div class="skill-card">Docker</div>
-        <div class="skill-card">CI/CD (Jenkins)</div>
-        <div class="skill-card">GraphQL</div>
-        <div class="skill-card">Terraform</div>
+    <div class="content-area">
+        <h2>Professional Experience</h2>
+
+        <div class="job-block">
+            <div class="job-header">
+                <div class="job-title">
+                    <h3>AT&T</h3>
+                    <b>Senior Java Full Stack Developer</b>
+                </div>
+                <div class="job-meta">
+                    <span class="job-date">Nov 2025 – Present</span>
+                    <span class="job-loc">Dallas, TX</span>
+                </div>
+            </div>
+            <ul class="bullet-list">
+                <li><b>Enterprise Microservices:</b> Architecting and maintaining scalable microservices for telecom backend using <b>Java 21</b> and Spring Boot 3.2, supporting over 1 million concurrent users.</li>
+                <li><b>Event-Driven Messaging:</b> Implementing <b>Apache Kafka</b> ecosystem (Producers, Consumers, Streams) for real-time order processing and asynchronous data synchronization across 50+ services.</li>
+                <li><b>Performance Engineering:</b> Leveraging <b>Spring WebFlux</b> for non-blocking I/O operations, reducing server-side latency by 35% compared to traditional Spring MVC.</li>
+                <li><b>Cloud Orchestration:</b> Automating deployments on <b>AWS EKS</b> using Helm charts and Terraform, ensuring multi-region high availability and fault tolerance.</li>
+                <li><b>Security Compliance:</b> Enforcing <b>OAuth2 and OIDC</b> authentication flows, securing sensitive customer data through end-to-end encryption and RBAC.</li>
+                <li><b>Agile Leadership:</b> Driving Scrum ceremonies and performing high-standard peer code reviews to ensure zero-defect production releases.</li>
+            </ul>
+        </div>
+
+        <div class="job-block">
+            <div class="job-header">
+                <div class="job-title">
+                    <h3>County of Santa Clara</h3>
+                    <b>Java Full Stack Developer</b>
+                </div>
+                <div class="job-meta">
+                    <span class="job-date">May 2024 – Oct 2025</span>
+                    <span class="job-loc">Santa Clara, CA</span>
+                </div>
+            </div>
+            <ul class="bullet-list">
+                <li><b>GCP Modernization:</b> Developed and migrated government application suites to <b>Google Cloud Platform (GCP)</b> using Google Kubernetes Engine (GKE).</li>
+                <li><b>Kotlin Integration:</b> Engineered high-performance backend modules using <b>Kotlin (Ktor)</b>, reducing code verbosity and enhancing null-safety across the application stack.</li>
+                <li><b>Asynchronous Processing:</b> Managed real-time data ingestion pipelines using <b>GCP Pub/Sub</b> and Kafka to ensure reliable state synchronization between siloed systems.</li>
+                <li><b>CI/CD Pipeline:</b> Built and optimized delivery pipelines using <b>GitHub Actions</b> and Jenkins, automating 90% of the testing and environment promotion workflow.</li>
+                <li><b>Database Management:</b> Optimizing complex queries in <b>PostgreSQL and Cloud SQL</b>, implementing advanced indexing and partitioning strategies for large datasets.</li>
+            </ul>
+        </div>
+
+        <div class="job-block">
+            <div class="job-header">
+                <div class="job-title">
+                    <h3>Alaska Airlines</h3>
+                    <b>Software Engineer</b>
+                </div>
+                <div class="job-meta">
+                    <span class="job-date">Aug 2023 – Apr 2024</span>
+                    <span class="job-loc">Seattle, WA</span>
+                </div>
+            </div>
+            <ul class="resume-bullets">
+                <ul class="bullet-list">
+                    <li><b>Reactive APIs:</b> Developed mission-critical flight booking APIs using <b>Spring WebFlux</b> to handle high-burst traffic during holiday peaks.</li>
+                    <li><b>UI Transformation:</b> Built responsive, component-driven frontends using <b>React.js and Redux</b>, improving user engagement metrics by 25%.</li>
+                    <li><b>Serverless Architecture:</b> Implemented <b>AWS Lambda</b> functions for automated image processing and metadata management in S3 buckets.</li>
+                    <li><b>Code Quality:</b> Maintained 90%+ unit test coverage using JUnit 5, Mockito, and Testcontainers, ensuring robust CI/CD stability.</li>
+                </ul>
+            </ul>
+        </div>
+
+        <div class="job-block">
+            <div class="job-header">
+                <div class="job-title">
+                    <h3>Capco</h3>
+                    <b>Java/J2EE Developer</b>
+                </div>
+                <div class="job-meta">
+                    <span class="job-date">Aug 2017 – May 2023</span>
+                    <span class="job-loc">Bangalore, India</span>
+                </div>
+            </div>
+            <ul class="bullet-list">
+                <li><b>Fintech Engineering:</b> Developed enterprise banking portals for global Tier-1 banks using Spring Boot, Hibernate, and Oracle DB.</li>
+                <li><b>Frontend Modernization:</b> Led the migration of legacy JSP pages to a modern <b>Angular 10</b> framework, implementing reusable UI component libraries.</li>
+                <li><b>Messaging Middleware:</b> Integrated RabbitMQ and Kafka for secure financial message delivery and transaction logging.</li>
+                <li><b>Legacy Refactoring:</b> Refactored monolithic J2EE applications into modular Spring Boot microservices, improving deployment speed by 50%.</li>
+                <li><b>Infrastructure:</b> Provisioned cloud environments using <b>Terraform and Ansible</b>, managing EC2, S3, and RDS instances in AWS.</li>
+            </ul>
+        </div>
+
     </div>
-</section>
+</div>
 
 <footer>
-    <p>&copy; 2026 Srinadh K | Built with Passion and Clean Code</p>
+    <p>&copy; 2026 Srinadh K | Senior Java Full Stack Architect | Dallas-Fort Worth, TX</p>
 </footer>
 
 </body>
