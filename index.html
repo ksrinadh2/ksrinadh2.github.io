@@ -15,7 +15,6 @@
             --text-main: #334155;
             --text-bold: #0f172a;
             --border: #e2e8f0;
-            --highlight: #fde047; /* Yellow highlight color */
         }
 
         * { box-sizing: border-box; transition: all 0.2s ease; }
@@ -75,8 +74,6 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.08);
             padding: 45px;
             border: 1px solid var(--border);
-            display: flex;
-            flex-direction: column;
         }
 
         .panel-title {
@@ -98,29 +95,14 @@
         .tags { display: flex; flex-wrap: wrap; gap: 5px; }
         .tag { background: #f8fafc; color: var(--text-main); font-weight: 600; font-size: 0.75rem; padding: 3px 8px; border-radius: 4px; border: 1px solid #e2e8f0; }
 
-        .job { margin-bottom: 25px; position: relative; padding-left: 20px; border-left: 2px solid #e2e8f0; }
-        
-        /* AT&T Specific Scrolling Container */
-        .att-scroll-container {
-            max-height: 250px; /* Set your desired height */
-            overflow-y: auto;
-            padding-right: 10px;
-            margin-bottom: 15px;
-            border-bottom: 4px solid var(--highlight); /* The Yellow Line from your image */
-        }
-
-        /* Styling for the scrollbar to keep it clean */
-        .att-scroll-container::-webkit-scrollbar { width: 5px; }
-        .att-scroll-container::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 10px; }
-        .att-scroll-container::-webkit-scrollbar-track { background: var(--bg); }
-
+        .job { margin-bottom: 35px; position: relative; padding-left: 20px; border-left: 2px solid #e2e8f0; }
         .job-head { display: flex; justify-content: space-between; margin-bottom: 10px; }
         .job-head h3 { margin: 0; font-size: 1.2rem; color: var(--text-bold); }
         .job-head .client { color: var(--accent); font-weight: 800; font-size: 0.95rem; display: block; }
         .job-head .date { font-size: 0.8rem; color: #94a3b8; font-weight: 700; }
 
         .bullets { margin: 0; padding: 0; list-style: none; }
-        .bullets li { font-size: 0.88rem; line-height: 1.6; margin-bottom: 8px; position: relative; padding-left: 15px; color: #475569; }
+        .bullets li { font-size: 0.88rem; line-height: 1.5; margin-bottom: 6px; position: relative; padding-left: 15px; color: #475569; }
         .bullets li::before { content: "▹"; position: absolute; left: 0; color: var(--accent); font-weight: bold; }
 
         footer { text-align: center; padding: 40px; background: var(--primary); color: #94a3b8; }
@@ -142,13 +124,20 @@
 </header>
 
 <div class="dashboard-grid">
+    
     <div class="panel">
         <div class="panel-title">
             <i class="fas fa-user-circle"></i>
             <h2>Professional Summary</h2>
         </div>
         <div class="summary-text">
-            <b>9+ Years Career:</b> Accomplished <b>Java Full Stack Developer</b> specializing in <b>Spring Ecosystem</b>. Proven expertise in building secure, cloud-native Microservices on <b>AWS</b> and <b>GCP</b>.
+            <b>9+ Years Career:</b> Accomplished <b>Java Full Stack Developer</b> specializing in <b>Spring Ecosystem</b> and scalable J2EE architectures. Proven expertise in building secure, cloud-native Microservices on <b>AWS</b> and <b>GCP</b>.
+        </div>
+        <div class="summary-text">
+            <b>Deep Technical Stack:</b> Proficient in <b>Java 21, Kotlin, and Go</b>, applying reactive programming (Spring WebFlux) for non-blocking APIs and <b>Kafka/RabbitMQ</b> for event-driven workflows.
+        </div>
+        <div class="summary-text">
+            <b>Frontend & Security:</b> Skilled in <b>React, Angular, and Redux</b> for responsive UI. Expert in <b>OWASP</b> security enforcement including OAuth2/JWT and TLS.
         </div>
 
         <div class="panel-title" style="margin-top: 35px;">
@@ -159,25 +148,37 @@
             <div class="tech-item">
                 <h4>Languages</h4>
                 <div class="tags">
-                    <span class="tag">Java 21</span><span class="tag">Kotlin</span><span class="tag">Go</span><span class="tag">SQL</span>
+                    <span class="tag">Java 21</span><span class="tag">Kotlin</span><span class="tag">Go</span><span class="tag">Rust</span><span class="tag">Python</span><span class="tag">SQL/PLSQL</span>
                 </div>
             </div>
             <div class="tech-item">
                 <h4>Frameworks</h4>
                 <div class="tags">
-                    <span class="tag">Spring Boot 3</span><span class="tag">WebFlux</span><span class="tag">Hibernate</span><span class="tag">GraphQL</span>
+                    <span class="tag">Spring Boot 3</span><span class="tag">Spring MVC</span><span class="tag">WebFlux</span><span class="tag">Hibernate</span><span class="tag">GraphQL</span><span class="tag">Apollo</span>
                 </div>
             </div>
             <div class="tech-item">
-                <h4>Cloud</h4>
+                <h4>Cloud & Messaging</h4>
                 <div class="tags">
-                    <span class="tag">AWS (EKS/S3)</span><span class="tag">GCP (GKE)</span><span class="tag">Kafka</span><span class="tag">Docker</span>
+                    <span class="tag">AWS (EKS/S3)</span><span class="tag">GCP (GKE)</span><span class="tag">Kafka</span><span class="tag">RabbitMQ</span><span class="tag">Terraform</span><span class="tag">Docker/K8s</span>
                 </div>
             </div>
             <div class="tech-item">
                 <h4>Frontend</h4>
                 <div class="tags">
-                    <span class="tag">ReactJS</span><span class="tag">Angular</span><span class="tag">Redux</span><span class="tag">SASS</span>
+                    <span class="tag">ReactJS</span><span class="tag">Angular</span><span class="tag">Redux/NgRx</span><span class="tag">Material UI</span><span class="tag">Vite</span><span class="tag">SASS</span>
+                </div>
+            </div>
+            <div class="tech-item">
+                <h4>Databases</h4>
+                <div class="tags">
+                    <span class="tag">PostgreSQL</span><span class="tag">MongoDB</span><span class="tag">DynamoDB</span><span class="tag">Oracle</span><span class="tag">Cassandra</span><span class="tag">Redis</span>
+                </div>
+            </div>
+            <div class="tech-item">
+                <h4>Tools & CI/CD</h4>
+                <div class="tags">
+                    <span class="tag">Jenkins</span><span class="tag">GitHub Actions</span><span class="tag">ArgoCD</span><span class="tag">IntelliJ</span><span class="tag">JUnit</span><span class="tag">Maven</span>
                 </div>
             </div>
         </div>
@@ -194,15 +195,61 @@
                 <div><span class="client">AT&T</span><h3>Java Full Stack Developer</h3></div>
                 <div class="date">2025 – Present</div>
             </div>
-            
-            <div class="att-scroll-container">
-                <ul class="bullets">
-                    <li>Developed scalable backend microservices using <b>Java 21</b>, Streams, and Multithreading.</li>
-                    <li>Integrated <b>Kotlin-based services</b> with Spring Boot and Spring WebFlux.</li>
-                    <li>Implemented event-driven architecture using <b>Apache Kafka</b> (DLT, partitions, offsets).</li>
-                    <li>Orchestrated deployments with <b>Kubernetes (EKS)</b> including rolling updates and auto-scaling.</li>
-                    <li>Secured APIs via <b>OAuth 2.0 / OpenID Connect</b> and Spring Security.</li>
-                    <li>Designed RESTful APIs following <b>DDD and SOLID</b> principles.</li>
-                    <li>Integrated backend APIs with <b>React and Angular</b> frontends.</li>
-                    <li>Managed configuration and secrets using <b>AWS Secrets Manager</b>.</li>
-                    <li>Implemented <b>SFTP integrations</b> using Spring Integration SFTP.</li>
+            <ul class="bullets">
+                <li>Developed scalable backend microservices using <b>Java 21</b>, Streams, and Multithreading.</li>
+                <li>Integrated <b>Kotlin-based services</b> with Spring Boot and Spring WebFlux.</li>
+                <li>Implemented event-driven architecture using <b>Apache Kafka</b> (DLT, partitions, offsets).</li>
+                <li>Orchestrated deployments with <b>Kubernetes (EKS)</b> including rolling updates and auto-scaling.</li>
+                <li>Secured APIs via <b>OAuth 2.0 / OpenID Connect</b> and Spring Security.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-head">
+                <div><span class="client">County of Santa Clara</span><h3>Java Full Stack Developer</h3></div>
+                <div class="date">2024 – 2025</div>
+            </div>
+            <ul class="bullets">
+                <li>Modernized services on <b>GCP (GKE)</b> and Red Hat OpenShift.</li>
+                <li>Designed cloud-native microservices using <b>Kotlin (Ktor)</b> and Spring Boot.</li>
+                <li>Built event-driven logic with <b>GCP Pub/Sub</b> and Couchbase.</li>
+                <li>Developed automated <b>SFTP</b> file transfer solutions using Spring Integration.</li>
+                <li>Used <b>Golang (GORM)</b> and Node.js for database operations in multi-service environments.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-head">
+                <div><span class="client">Alaska Airlines</span><h3>Software Engineer</h3></div>
+                <div class="date">2023 – 2024</div>
+            </div>
+            <ul class="bullets">
+                <li>Built pixel-perfect UI components in <b>React.js</b> and <b>AngularJS</b>.</li>
+                <li>Engineered high-performance middleware and APIs in <b>Golang</b>.</li>
+                <li>Processed real-time data using <b>Apache Spark</b> and Scala.</li>
+                <li>Deployed serverless APIs via <b>AWS Lambda</b> for event-driven travel workflows.</li>
+                <li>Executed data center migration to AWS using <b>Snowball</b> and CloudFormation.</li>
+            </ul>
+        </div>
+
+        <div class="job" style="border:none; margin-bottom:0;">
+            <div class="job-head">
+                <div><span class="client">Capco</span><h3>Java/J2EE Developer</h3></div>
+                <div class="date">2017 – 2023</div>
+            </div>
+            <ul class="bullets">
+                <li>Built fintech solutions using <b>Spring Boot</b>, Hibernate, and <b>Angular 10</b>.</li>
+                <li>Provisioned <b>AWS infrastructure</b> using Terraform (EC2, S3, RDS).</li>
+                <li>Integrated <b>Drools Rule Engine</b> for automated banking business logic.</li>
+                <li>Managed controlled schema migrations using <b>Flyway and Liquibase</b>.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Srinadh K | Java Full Stack Developer</p>
+</footer>
+
+</body>
+</html>
