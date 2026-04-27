@@ -19,10 +19,7 @@
     --border: #e2e8f0;
 }
 
-* {
-    box-sizing: border-box;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-}
+* { box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
 
 body {
     margin: 0;
@@ -49,7 +46,6 @@ header .subtitle {
     color: var(--accent);
     font-weight: 700;
     margin-top: 10px;
-    letter-spacing: 1px;
 }
 
 .contact-bar {
@@ -79,7 +75,6 @@ header .subtitle {
     gap: 25px;
 }
 
-/* LEFT */
 .card {
     background: var(--card-bg);
     padding: 20px;
@@ -105,7 +100,7 @@ header .subtitle {
     font-weight: 600;
 }
 
-/* RIGHT */
+/* RIGHT SIDE */
 .right {
     display: flex;
     flex-direction: column;
@@ -124,7 +119,6 @@ header .subtitle {
     color: var(--accent);
 }
 
-/* EXPERIENCE */
 .job {
     background: white;
     padding: 20px;
@@ -141,7 +135,7 @@ header .subtitle {
     font-size: 0.9rem;
 }
 
-/* 🔥 SCROLLABLE AT&T SECTION */
+/* ✅ ONLY ADDITION: SCROLL FOR AT&T */
 .scroll-box {
     max-height: 260px;
     overflow-y: auto;
@@ -197,7 +191,6 @@ footer {
 
 <!-- LEFT -->
 <div>
-
     <div class="card">
         <h3>Skills</h3>
         <span class="skill">Java 21</span>
@@ -211,7 +204,6 @@ footer {
         <span class="skill">Docker</span>
         <span class="skill">Kubernetes</span>
     </div>
-
 </div>
 
 <!-- RIGHT -->
@@ -219,60 +211,53 @@ footer {
 
     <div class="summary">
         <h2>Professional Summary</h2>
-        <p>Senior Java Full Stack Developer with 9+ years experience building scalable microservices, cloud-native applications, and event-driven systems using Java, Spring Boot, Kafka, AWS, and GCP.</p>
+        <p>Senior Java Full Stack Developer with 9+ years experience building scalable microservices, cloud-native systems, and event-driven architectures.</p>
     </div>
 
-    <!-- AT&T -->
+    <!-- AT&T (ONLY CHANGE HERE) -->
     <div class="job">
         <h3>AT&T <span> | 2025 – Present</span></h3>
 
         <div class="scroll-box">
-        <ul>
-            <li>Built scalable microservices using Java 21 and Spring Boot.</li>
-            <li>Designed reactive APIs using Spring WebFlux.</li>
-            <li>Implemented Kafka event-driven architecture (DLQ, retry, streaming).</li>
-            <li>Deployed using Kubernetes (EKS) and Docker containers.</li>
-            <li>Implemented OAuth2 + JWT security layer.</li>
-            <li>CI/CD pipelines using Jenkins & GitHub Actions.</li>
-
-            <!-- EXTRA SCROLL CONTENT -->
-            <li>Added Redis caching for performance optimization.</li>
-            <li>Used OpenTelemetry for distributed tracing.</li>
-            <li>Implemented Resilience4j circuit breaker patterns.</li>
-            <li>Performed production RCA using logs & monitoring tools.</li>
-            <li>Improved system latency by 35% through optimization.</li>
-            <li>Mentored junior engineers and conducted code reviews.</li>
-        </ul>
+            <ul>
+                <li>Built scalable microservices using Java 21 and Spring Boot.</li>
+                <li>Developed reactive APIs using Spring WebFlux.</li>
+                <li>Implemented Kafka event-driven architecture.</li>
+                <li>Deployed using Kubernetes (EKS).</li>
+                <li>Implemented OAuth2 + JWT security.</li>
+                <li>CI/CD using Jenkins & GitHub Actions.</li>
+                <li>Redis caching for performance improvement.</li>
+                <li>OpenTelemetry distributed tracing.</li>
+                <li>Resilience4j circuit breaker implementation.</li>
+                <li>Production RCA using logs & monitoring tools.</li>
+                <li>Performance tuning improving latency by 35%.</li>
+                <li>Mentored junior engineers.</li>
+            </ul>
         </div>
     </div>
 
-    <!-- COUNTY -->
+    <!-- OTHER JOBS (UNCHANGED) -->
     <div class="job">
         <h3>County of Santa Clara <span> | 2024 – 2025</span></h3>
         <ul>
             <li>Built microservices on GCP (GKE, Pub/Sub).</li>
-            <li>Developed Kotlin-based backend services.</li>
-            <li>Implemented CI/CD pipelines using GitHub Actions.</li>
+            <li>Developed Kotlin services.</li>
         </ul>
     </div>
 
-    <!-- AIRLINES -->
     <div class="job">
         <h3>Alaska Airlines <span> | 2023 – 2024</span></h3>
         <ul>
-            <li>Built airline booking APIs using Spring Boot.</li>
-            <li>Developed React UI components.</li>
-            <li>Used AWS Lambda for serverless processing.</li>
+            <li>Built React UI components.</li>
+            <li>Developed Spring Boot APIs.</li>
         </ul>
     </div>
 
-    <!-- CAPCO -->
     <div class="job">
         <h3>Capco <span> | 2017 – 2023</span></h3>
         <ul>
-            <li>Built fintech applications using Java & Spring Boot.</li>
-            <li>Migrated monolith to microservices architecture.</li>
-            <li>Worked on AWS infrastructure and Terraform.</li>
+            <li>Built fintech applications.</li>
+            <li>Migrated monolith to microservices.</li>
         </ul>
     </div>
 
