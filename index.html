@@ -81,6 +81,12 @@
     display: flex;
     align-items: center;
     gap: 0.4rem;
+    text-decoration: none;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .contact-chip:hover {
+    background: rgba(59,130,246,0.18);
+    border-color: rgba(59,130,246,0.45);
   }
 
   /* 3-COLUMN LAYOUT */
@@ -286,8 +292,8 @@
   <div class="header-contacts">
     <div class="contact-chip">✉ kocherlasrinadh2@gmail.com</div>
     <div class="contact-chip">📞 +1 (931) 297-9014</div>
-    <div class="contact-chip">🔗 LinkedIn</div>
-    <div class="contact-chip">🐱 GitHub</div>
+    <a class="contact-chip" href="https://www.linkedin.com/in/srinadhk1996" target="_blank" rel="noopener">🔗 LinkedIn</a>
+    <a class="contact-chip" href="https://github.com/kocherlasrinadh2-crypto/kocherlasrinadh2-crypto.github.io" target="_blank" rel="noopener">🐱 GitHub</a>
   </div>
 </header>
 
