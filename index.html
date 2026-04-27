@@ -1,218 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Srinadh K | Java Full Stack Developer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srinadh K | Senior Java Full Stack Engineer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --secondary: #1e293b;
+            --accent: #3b82f6;
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+            --white: #ffffff;
+            --bg: #f1f5f9;
+        }
 
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        background: #f4f6f9;
-        color: #1f2937;
-    }
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            margin: 0;
+            background: var(--bg);
+            color: var(--primary);
+            line-height: 1.6;
+        }
 
-    header {
-        background: #111827;
-        color: white;
-        padding: 40px 20px;
-        text-align: center;
-    }
+        header {
+            background: var(--primary);
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: var(--white);
+            padding: 80px 20px;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+        }
 
-    header h1 {
-        margin: 0;
-        font-size: 34px;
-    }
+        .header-content { max-width: 900px; margin: 0 auto; }
+        
+        header h1 { font-size: 3rem; margin: 0; letter-spacing: -1px; }
+        header p { font-size: 1.2rem; color: var(--text-dim); margin: 10px 0 25px; }
 
-    header p {
-        margin: 5px 0;
-        font-size: 16px;
-        color: #d1d5db;
-    }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            font-size: 1.1rem;
+        }
 
-    section {
-        max-width: 1000px;
-        margin: 20px auto;
-        background: white;
-        padding: 25px;
-        border-radius: 10px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    }
+        .social-links a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
 
-    h2 {
-        border-left: 5px solid #2563eb;
-        padding-left: 10px;
-        font-size: 22px;
-        margin-bottom: 15px;
-    }
+        .social-links a:hover { color: var(--accent); }
 
-    .tag {
-        display: inline-block;
-        background: #e5e7eb;
-        padding: 6px 10px;
-        margin: 4px;
-        border-radius: 5px;
-        font-size: 13px;
-    }
+        section {
+            max-width: 1000px;
+            margin: -40px auto 40px;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
 
-    .job {
-        margin-bottom: 20px;
-        padding-bottom: 10px;
-        border-bottom: 1px solid #eee;
-    }
+        h2 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            border-bottom: 2px solid var(--accent);
+            display: inline-block;
+            margin-bottom: 25px;
+        }
 
-    .job h3 {
-        margin: 0;
-        color: #111827;
-    }
+        /* Skills Grid */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 15px;
+        }
 
-    .role {
-        font-size: 14px;
-        color: #6b7280;
-    }
+        .skill-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
 
-    ul {
-        margin-top: 10px;
-    }
+        .skill-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-3px);
+            color: var(--accent);
+        }
 
-    li {
-        margin-bottom: 8px;
-        line-height: 1.5;
-    }
+        /* Experience and Projects */
+        .item { margin-bottom: 40px; }
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 10px;
+        }
 
-    .footer {
-        text-align: center;
-        padding: 20px;
-        color: #6b7280;
-        font-size: 14px;
-    }
+        .item-header h3 { margin: 0; color: var(--accent); font-size: 1.3rem; }
+        .date { font-weight: bold; color: var(--text-dim); font-size: 0.9rem; }
 
-    a {
-        color: #2563eb;
-        text-decoration: none;
-    }
-</style>
+        .project-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .project-card {
+            background: #f8fafc;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid var(--accent);
+        }
+
+        .project-card h4 { margin-top: 0; color: var(--primary); }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-dim);
+            background: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            .project-grid { grid-template-columns: 1fr; }
+            .item-header { flex-direction: column; }
+        }
+    </style>
 </head>
-
 <body>
 
 <header>
-    <h1>Srinadh K</h1>
-    <p>Senior Java Full Stack Developer | Spring Boot | Microservices | Kafka | React | AWS</p>
-    <p>9+ Years Experience | Dallas-Fort Worth | Open to Relocation | Full-Time / Contract</p>
-    <p>Email: kocherlasrinadh2@gmail.com | Phone: +1 (931) 297-9014</p>
+    <div class="header-content">
+        <h1>Srinadh K</h1>
+        <p>Senior Java Full Stack Engineer | Cloud Architect | Microservices Specialist</p>
+        <div class="social-links">
+            <a href="https://github.com/kocherlasrinadh2-crypto"><i class="fab fa-github"></i> View Profile</a>
+            <a href="https://www.linkedin.com"><i class="fab fa-linkedin"></i> View Profile</a>
+            <a href="mailto:kocherlasrinadh2@gmail.com"><i class="fas fa-envelope"></i> Contact Me</a>
+        </div>
+    </div>
 </header>
 
-<!-- SUMMARY -->
 <section>
-    <h2>Professional Summary</h2>
+    <h2>Executive Summary</h2>
     <p>
-        Senior Java Full Stack Developer with 9+ years of experience designing and delivering scalable,
-        distributed, cloud-native applications across fintech, telecom, airline, and government domains.
-        Strong expertise in microservices architecture, event-driven systems, and API development using
-        Java, Spring Boot, and Apache Kafka. Experienced in building highly scalable systems deployed on
-        AWS and GCP using Docker and Kubernetes.
+        Strategic and performance-driven <b>Senior Full Stack Developer</b> with over 9 years of expertise in architecting 
+        distributed systems. I specialize in building high-concurrency, low-latency applications utilizing 
+        <b>Java 21, Kotlin, and Spring WebFlux</b>. My core focus is on transforming complex business requirements 
+        into scalable cloud-native solutions across the Telecom, Fintech, and Aerospace sectors. Proven track record 
+        in leading large-scale data migrations and implementing event-driven architectures with <b>Apache Kafka</b> 
+        within AWS and GCP ecosystems.
     </p>
 </section>
 
-<!-- SKILLS -->
 <section>
-    <h2>Core Skills</h2>
-
-    <span class="tag">Java 8/11/17/21</span>
-    <span class="tag">Spring Boot</span>
-    <span class="tag">Microservices</span>
-    <span class="tag">Kafka</span>
-    <span class="tag">Spring WebFlux</span>
-    <span class="tag">React.js</span>
-    <span class="tag">Angular</span>
-    <span class="tag">AWS</span>
-    <span class="tag">GCP</span>
-    <span class="tag">Docker</span>
-    <span class="tag">Kubernetes</span>
-    <span class="tag">REST APIs</span>
-    <span class="tag">CI/CD</span>
-    <span class="tag">PostgreSQL</span>
-    <span class="tag">MySQL</span>
-    <span class="tag">Hibernate</span>
-    <span class="tag">Spring Security</span>
-</section>
-
-<!-- EXPERIENCE -->
-<section>
-    <h2>Professional Experience</h2>
-
-    <div class="job">
-        <h3>AT&T</h3>
-        <div class="role">Senior Java Full Stack Developer | Nov 2025 – Present</div>
-        <ul>
-            <li>Designed scalable microservices using Java 21, Spring Boot, and Kafka.</li>
-            <li>Built event-driven architecture supporting high-volume enterprise transactions.</li>
-            <li>Implemented REST and reactive APIs using Spring MVC and WebFlux.</li>
-            <li>Deployed cloud-native applications on AWS using Docker and Kubernetes (EKS).</li>
-        </ul>
-    </div>
-
-    <div class="job">
-        <h3>County of Santa Clara</h3>
-        <div class="role">Java Full Stack Developer | May 2024 – Oct 2025</div>
-        <ul>
-            <li>Developed microservices using Spring Boot and Kotlin (Ktor).</li>
-            <li>Implemented Kafka-based event-driven systems on GCP.</li>
-            <li>Deployed applications on Kubernetes (GKE) and OpenShift.</li>
-            <li>Built CI/CD pipelines using Jenkins and GitHub Actions.</li>
-        </ul>
-    </div>
-
-    <div class="job">
-        <h3>Alaska Airlines</h3>
-        <div class="role">Software Engineer | Aug 2023 – Apr 2024</div>
-        <ul>
-            <li>Developed reactive APIs using Spring WebFlux and Kafka.</li>
-            <li>Built UI components using React.js and Angular.</li>
-            <li>Worked on AWS cloud services and serverless architecture.</li>
-            <li>Improved system performance and scalability.</li>
-        </ul>
-    </div>
-
-    <div class="job">
-        <h3>Capco</h3>
-        <div class="role">Java/J2EE Developer | Aug 2017 – May 2023</div>
-        <ul>
-            <li>Built enterprise banking applications using Spring Boot and Microservices.</li>
-            <li>Developed frontend applications using React and Angular.</li>
-            <li>Implemented Kafka-based event-driven systems.</li>
-            <li>Worked in Agile teams and delivered full SDLC projects.</li>
-        </ul>
+    <h2>Impactful Projects</h2>
+    <div class="project-grid">
+        <div class="project-card">
+            <h4><i class="fas fa-project-diagram"></i> Kafka Order Ecosystem</h4>
+            <p>Engineered a real-time event-driven processing engine handling over 100k transactions per hour. Utilized Spring Boot and Kafka with Schema Registry to ensure data integrity and asynchronous fault tolerance.</p>
+        </div>
+        <div class="project-card">
+            <h4><i class="fas fa-shield-alt"></i> Enterprise Auth Service</h4>
+            <p>Designed a centralized JWT-based Identity Provider using Spring Security and OAuth2. Implemented Role-Based Access Control (RBAC) to secure 50+ microservices for a major telecom client.</p>
+        </div>
+        <div class="project-card">
+            <h4><i class="fas fa-cloud-upload-alt"></i> Cloud-Native API Gateway</h4>
+            <p>Architected a high-throughput API Gateway using Spring Cloud Gateway and WebFlux. Integrated Redis for rate-limiting and circuit breakers (Resilience4j) to maintain 99.99% system uptime.</p>
+        </div>
+        <div class="project-card">
+            <h4><i class="fas fa-database"></i> Real-time Analytics Dashboard</h4>
+            <p>Built a responsive full-stack platform using React and GraphQL. Integrated real-time data streaming from PostgreSQL to provide executives with live operational KPIs.</p>
+        </div>
     </div>
 </section>
 
-<!-- PROJECTS -->
 <section>
-    <h2>Key Projects</h2>
-
-    <ul>
-        <li><b>Kafka Event-Driven Order System:</b> Real-time microservices architecture using Spring Boot + Kafka + AWS.</li>
-        <li><b>Microservices API Platform:</b> Scalable REST APIs with Spring Boot, Docker, Kubernetes, PostgreSQL.</li>
-        <li><b>JWT Authentication System:</b> Secure login system using Spring Security and React frontend.</li>
-        <li><b>Notification System:</b> Real-time messaging using Kafka, WebSockets, and Redis caching.</li>
-    </ul>
+    <h2>Technical Arsenal</h2>
+    <div class="skills-container">
+        <div class="skill-card">Java 21 / Kotlin</div>
+        <div class="skill-card">Spring Boot 3.x</div>
+        <div class="skill-card">Spring WebFlux</div>
+        <div class="skill-card">Apache Kafka</div>
+        <div class="skill-card">AWS (EKS/RDS)</div>
+        <div class="skill-card">React / Redux</div>
+        <div class="skill-card">Kubernetes</div>
+        <div class="skill-card">PostgreSQL</div>
+        <div class="skill-card">Docker</div>
+        <div class="skill-card">CI/CD (Jenkins)</div>
+        <div class="skill-card">GraphQL</div>
+        <div class="skill-card">Terraform</div>
+    </div>
 </section>
 
-<!-- LINKS -->
-<section>
-    <h2>Links</h2>
-    <p>
-        GitHub: <a href="https://github.com/kocherlasrinadh2-crypto">Profile</a><br>
-        Portfolio: <a href="https://kocherlasrinadh2-crypto.github.io">Live Site</a><br>
-        LinkedIn: <a href="https://www.linkedin.com">Profile</a>
-    </p>
-</section>
-
-<div class="footer">
-    © 2026 Srinadh K | Senior Java Full Stack Developer
-</div>
+<footer>
+    <p>&copy; 2026 Srinadh K | Built with Passion and Clean Code</p>
+</footer>
 
 </body>
 </html>
